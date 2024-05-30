@@ -39,7 +39,49 @@ html, body, div, span, h1, h2, h3, p {
 
 /* header */
 
+:root{
+    --color-bg: white;
+    --color-text: rgba(55, 60, 66, 1);
+    --color-primary: black;
+    --color-bg-grey: rgba(225, 231, 243, 1);
+    --color-when: rgba(127, 136, 147, 1);
+    --border-color: rgba(0, 0, 0, 0.1);
+    --color-img: invert(0);
+    --color-bg-yellow: rgba(248, 254, 145, 1);
+    --color-bg-purple: #7366bd;
+}
+
+.darkstyle{
+    --color-bg: rgb(35, 40, 43);
+    --color-text: white;
+    --color-primary: white;
+    --color-bg-grey: rgb(19, 19, 19);
+    --color-when: white;
+    --border-color: white;
+    --color-img: invert(1);
+    --color-bg-yellow: black;
+    --color-bg-purple: black;
+}
+
+#but{
+    position: fixed;
+    top: 88px;
+    left: 210px;
+    background: var(--color-bg);
+    width: 80px;
+    height: 25px;
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#but span{
+    color: var(--color-text);
+}
+
 .header_all{
+    position: fixed;
+    z-index: 20;
     width: 100%;
     height: 144px;
 }
@@ -47,7 +89,7 @@ html, body, div, span, h1, h2, h3, p {
 .header_up{
     width: 100%;
     height: 48px;
-    background-color: rgba(225, 231, 243, 1);
+    background-color: var(--color-bg-grey);
 }
 
 .visit{
@@ -56,6 +98,7 @@ html, body, div, span, h1, h2, h3, p {
     line-height: 20px;
     text-align: center;
     padding-top: 14px;
+    color: var(--color-text);
 }
 
 .header_up > img{
@@ -64,12 +107,14 @@ html, body, div, span, h1, h2, h3, p {
     position: relative;
     bottom: 16px;
     left: 96%;
+    filter: var(--color-img);
 }
 
 .header_down{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color: var(--color-bg);
     width: 100%;
     height: 96px;
 }
@@ -85,40 +130,49 @@ html, body, div, span, h1, h2, h3, p {
     right: 13%;
 }
 
-.allora_block img{
+.allora_block > img{
     height: 100%;
     width: 100%;
+    filter: var(--color-img);
 }
 
 .link_block_1{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 45%;
     height: 36px;
     position: relative;
-    left: 17%;
+    left: 16.5%;
 }
 
 .link_1{
     font-family: 'Roboto';
-    font-size: 16px;
+    font-size: 15px;
     line-height: 25px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
     text-decoration: underline solid rgba(145, 129, 255, 1) 1px;
     text-underline-offset: 8px;
-    margin-right: 40px;
+    margin-right: 30px;
 }
 
 .purple_cube{
     width: 6px;
     height: 6px;
     background-color: rgba(162, 148, 255, 1);
-    margin-right: 40px;
+    margin-right: 30px;
 }
 
 .be{
-    margin-right: 30px;
+    margin-right: 90px;
+}
+
+.ball{
+    margin-left: -60px;
+}
+
+.menu_container{
+    display: none;
 }
 /* 2 block*/
 
@@ -127,6 +181,7 @@ html, body, div, span, h1, h2, h3, p {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-color: var(--color-bg);
     width: 100%;
     height: 1384px;
 }
@@ -138,6 +193,17 @@ html, body, div, span, h1, h2, h3, p {
     justify-content: space-around;
     width: 83%;
     height: 464px;
+}
+
+.anim.award_winning{
+    transform: translateX(-20px);
+    transition: all 2s;
+    opacity: 0;
+}
+
+.anim.award_winning.active{
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .award_winning_up{
@@ -157,7 +223,7 @@ html, body, div, span, h1, h2, h3, p {
     font-family: 'Unica One';
     font-size: 19px;
     line-height: 24px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .circles{
@@ -185,7 +251,7 @@ html, body, div, span, h1, h2, h3, p {
     font-family: 'Unica One';
     font-size: 19px;
     line-height: 24px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .purple_line_1{
@@ -200,7 +266,7 @@ html, body, div, span, h1, h2, h3, p {
     max-width: 1031px;
     line-height: 75px;
     text-align: center;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .description_text{
@@ -210,7 +276,7 @@ html, body, div, span, h1, h2, h3, p {
     max-width: 773px;
     letter-spacing: 0.25px;
     text-align: center;
-    color: rgba(127, 136, 147, 1);
+    color: var(--color-text);
 }
 
 .two_buttons{
@@ -234,7 +300,7 @@ html, body, div, span, h1, h2, h3, p {
     position: relative;
     left: 25%;
     top: 18px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .button_2{
@@ -250,6 +316,7 @@ html, body, div, span, h1, h2, h3, p {
     position: relative;
     left: 27%;
     top: 18px;
+    color: var(--color-text);
 }
 
 .design_imgs{
@@ -294,7 +361,7 @@ html, body, div, span, h1, h2, h3, p {
     align-items: flex-end;
     width: 100%;
     height: 2200px;
-    background-color: rgba(236, 240, 247, 1);
+    background-color: var(--color-bg-grey);
 }
 
 .photo_blocks{
@@ -308,6 +375,15 @@ html, body, div, span, h1, h2, h3, p {
     width: 50%;
     height: 1920px;
     margin-top: 160px;
+}
+
+.anim.photo_block_1{
+    transition: all 2s;
+    opacity: 0;
+}
+
+.anim.photo_block_1.active{
+    opacity: 1;
 }
 
 .phone{
@@ -336,6 +412,17 @@ html, body, div, span, h1, h2, h3, p {
     left: 50%;
     width: 50%;
     height: 1920px;
+}
+
+.anim.photo_block_2{
+    transform: translateX(-20px);
+    transition: all 1s;
+    opacity: 0;
+}
+
+.anim.photo_block_2.active{
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .laptop{
@@ -401,6 +488,7 @@ html, body, div, span, h1, h2, h3, p {
     justify-content: space-evenly;
     width: 100%;
     height: 1555px;
+    background-color: var(--color-bg);
 }
 
 .text_block{
@@ -434,7 +522,7 @@ html, body, div, span, h1, h2, h3, p {
     font-family: 'Unica One';
     font-size: 20px;
     line-height: 24px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
     margin-right: 25px;
 }
 
@@ -449,7 +537,7 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 40px;
     line-height: 46px;
     max-width: 504px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .text_block_2{
@@ -466,15 +554,15 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 18px;
     line-height: 28px;
     max-width: 544px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .how_work{
     font-family: 'Roboto';
     font-size: 18px;
     line-height: 28px;
-    color: rgba(55, 60, 66, 1);
-    text-decoration: underline solid rgba(55, 60, 66, 1) 1px;
+    color: var(--color-text);
+    text-decoration: underline solid var(--color-text) 1px;
     text-underline-offset: 8px;
 }
 
@@ -513,7 +601,7 @@ html, body, div, span, h1, h2, h3, p {
     font-family: 'Unica One';
     font-size: 19px;
     line-height: 24px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
     
 }
 
@@ -528,7 +616,7 @@ html, body, div, span, h1, h2, h3, p {
     font-family: 'Yeseva One';
     font-size: 26px;
     line-height: 36px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .description{
@@ -536,7 +624,7 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 15px;
     line-height: 25px;
     max-width: 367px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 /* 5 block*/
@@ -548,7 +636,7 @@ html, body, div, span, h1, h2, h3, p {
     justify-content: space-evenly;
     width: 100%;
     height: 1162px;
-    background: rgba(248, 254, 145, 1);
+    background: var(--color-bg-yellow);
 }
 
 .goal_block{
@@ -580,7 +668,7 @@ html, body, div, span, h1, h2, h3, p {
     font-family: 'Unica One';
     font-size: 20px;
     line-height: 24px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
     margin-right: 20px;
 }
 
@@ -595,7 +683,7 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 40px;
     line-height: 46px;
     max-width: 505px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .procedure:first-child{
@@ -616,15 +704,15 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 18px;
     line-height: 28px;
     max-width: 571px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .know_text{
     font-family: 'Roboto';
     font-size: 18px;
     line-height: 28px;
-    color: rgba(55, 60, 66, 1);
-    text-decoration: underline solid rgba(55, 60, 66, 1) 1px;
+    color: var(--color-text);
+    text-decoration: underline solid var(--color-text) 1px;
     text-underline-offset: 8px;
     margin-top: 10px;
 }
@@ -641,7 +729,7 @@ html, body, div, span, h1, h2, h3, p {
 .black_line{
     width: 100%;
     height: 1px;
-    background-color: rgba(55, 60, 66, 1);
+    background-color: var(--color-text);
 }
 
 .block_1{
@@ -657,7 +745,7 @@ html, body, div, span, h1, h2, h3, p {
     font-family: 'Unica One';
     font-size: 19px;
     line-height: 22px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .num:first-child{
@@ -669,7 +757,7 @@ html, body, div, span, h1, h2, h3, p {
     font-family: 'Yeseva One';
     font-size: 35px;
     line-height: 42px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .block_2{
@@ -723,7 +811,7 @@ html, body, div, span, h1, h2, h3, p {
     justify-content: space-evenly;
     width: 100%;
     height: 940px;
-    background-color: #7366bd;
+    background-color: var(--color-bg-purple);
 }
 
 .white_lines{
@@ -901,6 +989,7 @@ html, body, div, span, h1, h2, h3, p {
     justify-content: space-between;
     width: 100%;
     height: 1063px;
+    background-color: var(--color-bg);
 }
 
 .how_block{
@@ -926,7 +1015,7 @@ html, body, div, span, h1, h2, h3, p {
     font-family: 'Unica One';
     font-size: 20px;
     line-height: 24px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
     margin-right: 20px;
 }
 
@@ -940,7 +1029,7 @@ html, body, div, span, h1, h2, h3, p {
     font-family: 'Yeseva One';
     font-size: 39px;
     line-height: 46px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .when{
@@ -948,15 +1037,15 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 18px;
     line-height: 28px;
     max-width: 468px;
-    color: rgba(127, 136, 147, 1);
+    color: var(--color-when);
 }
 
 .see{
     font-family: 'Roboto';
     font-size: 18px;
     line-height: 28px;
-    color: rgba(55, 60, 66, 1);
-    text-decoration: underline solid rgba(55, 60, 66, 1) 1px;
+    color: var(--color-text);
+    text-decoration: underline solid var(--color-text) 1px;
     text-underline-offset: 10px;
 }
 
@@ -998,7 +1087,7 @@ html, body, div, span, h1, h2, h3, p {
     font-family: 'Roboto';
     font-size: 20px;
     line-height: 23px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .text_under{
@@ -1006,7 +1095,7 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 15px;
     line-height: 25px;
     max-width: 237px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .gray_border_square{
@@ -1054,6 +1143,7 @@ html, body, div, span, h1, h2, h3, p {
     justify-content: space-evenly;
     width: 100%;
     height: 1164px;
+    background-color: var(--color-bg);
 }
 
 .our_clients_block{
@@ -1084,7 +1174,7 @@ html, body, div, span, h1, h2, h3, p {
 .frequently{
     font-family: 'Unica One';
     font-size: 20px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
     line-height: 24px;
     margin-right: 20px;
 }
@@ -1099,7 +1189,7 @@ html, body, div, span, h1, h2, h3, p {
     max-width: 533px;
     font-family: 'Yeseva One';
     font-size: 40px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
     line-height: 46px;
 }
 
@@ -1117,15 +1207,15 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 18px;
     line-height: 28px;
     max-width: 539px;
-    color: rgba(127, 136, 147, 1);
+    color: var(--color-when);
 }
 
 .our_link_2{
     font-family: 'Roboto';
     font-size: 18px;
     line-height: 28px;
-    color: rgba(55, 60, 66, 1);
-    text-decoration: underline solid rgba(55, 60, 66, 1) 1px;
+    color: var(--color-text);
+    text-decoration: underline solid var(--color-text) 1px;
     text-underline-offset: 8px;
     margin-bottom: 7px;
 }
@@ -1182,7 +1272,7 @@ html, body, div, span, h1, h2, h3, p {
     line-height: 20px;
     max-width: 177px;
     letter-spacing: 2px;
-    color: rgba(34, 34, 34, 1);
+    color: var(--color-text);
     padding-top: 10px;
     padding-left: 15px;
 }
@@ -1203,7 +1293,7 @@ html, body, div, span, h1, h2, h3, p {
     width: 48%;
     height: 200px;
     margin-top: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
 }
 
 .question{
@@ -1211,7 +1301,7 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 20px;
     max-width: 417px;
     line-height: 25px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
     margin-top: -5px;
 }
 
@@ -1220,7 +1310,7 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 15px;
     max-width: 500px;
     line-height: 20px;
-    color: rgba(0, 0, 0, 1);
+    color: var(--color-text);
     margin-left: 30px;
 }
 
@@ -1244,7 +1334,7 @@ html, body, div, span, h1, h2, h3, p {
     justify-content: space-evenly;
     width: 100%;
     height: 1040px;
-    background-color: #7366bd;
+    background-color: var(--color-bg-purple);
 }
 
 .double_container_2{
@@ -1409,6 +1499,7 @@ html, body, div, span, h1, h2, h3, p {
     justify-content: space-around;
     width: 100%;
     height: 1229px;
+    background-color: var(--color-bg);
 }
 
 .contact_us_block{
@@ -1434,7 +1525,7 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 20px;
     max-width: 93px;
     line-height: 24px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
     margin-right: 20px;
 }
 
@@ -1449,7 +1540,7 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 40px;
     max-width: 452px;
     line-height: 46px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .branding{
@@ -1457,7 +1548,7 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 18px;
     max-width: 564px;
     line-height: 28px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
 }
 
 .forms{
@@ -1781,13 +1872,14 @@ html, body, div, span, h1, h2, h3, p {
     justify-content: space-evenly;
     width: 100%;
     height: 286px;
+    background-color: var(--color-bg);
 }
 
 .usefull_links{
     font-family: 'Unica One';
     font-size: 19px;
     line-height: 24px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
     margin-left: -20px;
 }
 
@@ -1803,7 +1895,7 @@ html, body, div, span, h1, h2, h3, p {
     font-family: 'Roboto';
     font-size: 20px;
     line-height: 30px;
-    color: rgba(55, 60, 66, 1);
+    color: var(--color-text);
     text-decoration: underline solid rgba(145, 129, 255, 1) 1px;
     text-underline-offset: 8px;
     margin-right: 30px;
@@ -1852,10 +1944,41 @@ html, body, div, span, h1, h2, h3, p {
     font-size: 12px;
     line-height: 20px;
     color: rgba(171, 185, 202, 1);
-    margin-right: 20px;
+}
+
+.go_top{
+    z-index: 20;
+    width: 180px;
+    height: 50px;
+    position: fixed;
+    left: 85%;
+    top: 90%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    border: 2px solid var(--color-text);
+    background: white;
+    color: var(--color-text);
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+.go_top--show{
+    opacity: 1;
+    transition: opacity 0.6s;
+}
+
+.go_top:hover{
+    background-color: #e9e9e9;
 }
 
 @media (max-width: 1440px){
+    #but{
+        top: 88px;
+        left: 170px;
+    }
+
     .header_up > img{
         left: 95%;
     }
@@ -1865,21 +1988,27 @@ html, body, div, span, h1, h2, h3, p {
         right: 13%;
     }
 
+    .be{
+        margin-right: 90px;
+        margin-top: 3px;
+    }
+    
+    .ball{
+        margin-left: -60px;
+        margin-top: 3px;
+    }
+
     .link_block_1{
         left: 15%;
     }
     
     .link_1{
-        font-size: 14px;
+        font-size: 13px;
         margin-right: 30px;
     }
     
     .purple_cube{
         margin-right: 30px;
-    }
-    
-    .be{
-        margin-right: 20px;
     }
 
     .date{
@@ -1985,6 +2114,12 @@ html, body, div, span, h1, h2, h3, p {
 }
 
 @media (max-width: 1024px){
+    #but{
+        top: 88px;
+        left: 130px;
+        height: 23px;
+    }
+
     .header_up img{
         left: 95%;
     }
@@ -2010,7 +2145,15 @@ html, body, div, span, h1, h2, h3, p {
     }
     
     .be{
-        margin-right: 20px;
+        width: 18px;
+        margin-right: 0px;
+        margin-top: 3px;
+    }
+    
+    .ball{
+        width: 17px;
+        margin-left: 15px;
+        margin-top: 3px;
     }
 
     .award_winning_up{
@@ -2255,7 +2398,6 @@ html, body, div, span, h1, h2, h3, p {
     .white_line_3{
         width: 50%;
         height: 1px;
-        background-color: rgba(255, 255, 255, 1);
     }
 
     .join{
@@ -2263,11 +2405,9 @@ html, body, div, span, h1, h2, h3, p {
     }
 
     .most{
-        font-family: 'Roboto';
         font-size: 14px;
         max-width: 572px;
         line-height: 28px;
-        color: rgba(255, 255, 255, 1);
     }
 
     .by{
@@ -2284,11 +2424,9 @@ html, body, div, span, h1, h2, h3, p {
     }
 
     .branding{
-        font-family: 'Roboto';
         font-size: 13px;
         max-width: 700px;
         line-height: 28px;
-        color: rgba(55, 60, 66, 1);
     }
     
     .collab{
@@ -2343,9 +2481,23 @@ html, body, div, span, h1, h2, h3, p {
     .link_block_2{
         width: 70%;
     }
+
+    .go_top{
+        width: 180px;
+        height: 50px;
+        left: 80%;
+        top: 90%;
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 768px) {
+    #but{
+        top: 88px;
+        left: 110px;
+        height: 21px;
+    }
+
     .allora_block{
         width: 8%;
         height: 16px;
@@ -2368,15 +2520,18 @@ html, body, div, span, h1, h2, h3, p {
     }
     
     .be{
-        margin-right: 20px;
+        width: 15px;
+        margin-right: 0px;
+        margin-top: 4px;
+    }
+    
+    .ball{
+        width: 14px;
+        margin-left: 15px;
+        margin-top: 4px;
     }
 
     .seckond_block{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
         height: 984px;
     }
 
@@ -2534,15 +2689,9 @@ html, body, div, span, h1, h2, h3, p {
         font-size: 20px;
     }
 
-    .description_text{
-        font-size: 1px;
-        line-height: 20px;
-    }
-
     .fifth_block{
         width: 100%;
         height: 922px;
-        background: rgba(248, 254, 145, 1);
     }
 
     .goal_block{
@@ -2804,7 +2953,6 @@ html, body, div, span, h1, h2, h3, p {
     .white_line_3{
         width: 45%;
         height: 1px;
-        background-color: rgba(255, 255, 255, 1);
     }
 
     .join{
@@ -2812,11 +2960,9 @@ html, body, div, span, h1, h2, h3, p {
     }
 
     .most{
-        font-family: 'Roboto';
         font-size: 14px;
         max-width: 572px;
         line-height: 28px;
-        color: rgba(255, 255, 255, 1);
     }
 
     .by{
@@ -2846,11 +2992,9 @@ html, body, div, span, h1, h2, h3, p {
     }
 
     .dedicated{
-        font-family: 'Yeseva One';
         font-size: 32px;
         max-width: 452px;
         line-height: 46px;
-        color: rgba(55, 60, 66, 1);
     }
 
     .branding{
@@ -2917,80 +3061,109 @@ html, body, div, span, h1, h2, h3, p {
     .information{
         font-size: 11px;
     }
+
+    .go_top{
+        width: 150px;
+        height: 40px;
+        left: 77%;
+        font-size: 19px;
+    }
 }
 
 @media (max-width: 425px) {
+    #but{
+        height: 19px;
+        width: 75px;
+    }
+
     .allora_block{
         width: 12%;
         height: 16px;
         right: 17%;
     }
 
-    
-    
+    .link_block_1{
+        display: none;
+    }
 
+    .menu_container{
+        display: block;
+        position: relative;
+        left: 100px;
+        width: 20px;
+        height: 20px;
+    }
 
+    #menu_button{
+        height: 25px;
+        width: 25px;
+        background: none;
+        border-style: none;
+        margin-top: 0px;
+        margin-left: -3px;
+    }
 
+    #menu_button > img{
+        margin: auto;
+        object-fit: cover;
+        width: 100%;
+        height: 80%;
+    }
 
+    #menu{
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 160px;
+        height: 250px;
+        position: relative;
+        right: 145px;
+        top: 10px; 
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 2px 2px 18px black;
+        background-color: var(--color-bg);
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .svgs{
+        width: 70%;
+        display: flex;
+    }
 
     .link_1{
-        font-size: 10px;
-        margin-right: 20px;
+        width: 120px;
+        margin-left: 20%;
     }
-    
-    .purple_cube{
-        margin-right: 20px;
-        margin-top: 3px;
-    }
-    
-    .be{
-        margin-right: 20px;
+
+    .disp{
+        display: none !important;
     }
 
     .seckond_block{
         width: 100%;
-        height: 984px;
+        height: 844px;
+    }
+
+    .award_winning{
+        width: 83%;
+        height: 400px;
     }
 
     .award_winning_up{
-        width: 45%;
-        height: 30px;
+        width: 75%;
+        height: 20px;
     }
 
     .date{
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .circles{
-        width: 50px;
-        height: 20px;
-        margin-bottom: 5px;
+        width: 40px;
+        height: 10px;
+        margin-bottom: 15px;
     }
     
     .first_circle{
@@ -3004,102 +3177,166 @@ html, body, div, span, h1, h2, h3, p {
     }
 
     .equal{
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .award_winning_text{
-        font-size: 43px;
+        font-size: 30px;
         max-width: 1400px;
-        line-height: 45px;
+        line-height: 35px;
     }
 
     .description_text{
-        font-size: 15px;
-        line-height: 23px;
+        font-size: 12px;
+        line-height: 21px;
         max-width: 690px;
     }
 
+    .two_buttons{
+        width: 315px;
+        height: 54px;
+        margin-left: -15px;
+    }
+
+    .button_1{
+        width: 130px;
+        height: 44px;
+    }
+    
+    .button_1_text{
+        font-size: 12px;
+        left: 23%;
+        top: 16px;
+    }
+    
+    .button_2{
+        width: 114px;
+        height: 44px;
+    }
+    
+    .button_2_text{
+        font-size: 12px;
+        left: 24%;
+        top: 16px;
+    }
+
+    .design_imgs{
+        height: 350px;
+    }
+
     .leaf_blocks{
-        left: 20px;
+        width: 200px;
+        top: -150px;
+        left: 30px;
     }
     
     .seck_blocks{
-        left: 140px;
+        width: 140px;
+        top: -90px;
+        left: 130px;
     }
     
     .third_blocks{
-        top: 5%;
-        left: 275px;
+        width: 90px;
+        top: -43%;
+        left: 253px;
     }
     
     .white_arrow{
-        top: 85%;
-        margin-right: 4%;
+        top: 80%;
+        margin-right: 6%;
     }
 
     .third_block{
-        height: 1280px;
+        height: 980px;
     }
 
     .photo_blocks{
-        height: 1780px;
+        height: 1680px;
     }
     
     .photo_block_1{
-        height: 1580px;
-        margin-top: 610px;
+        height: 1380px;
+        margin-top: 810px;
     }
     
     .phone{
         width: 100%;
-        height: 390px;
+        height: 290px;
     }
     
     .pumpbottle{
         width: 100%;
-        height: 390px;
+        height: 290px;
     }
     
     .packet{
         width: 100%;
-        height: 390px;
+        height: 290px;
     }
     
     .photo_block_2{
-        height: 1520px;
-        margin-top: 500px;
+        height: 1420px;
+        margin-top: 700px;
     }
     
     .laptop{
         width: 100%;
-        height: 390px;
+        height: 290px;
     }
     
     .tag{
         width: 100%;
-        height: 390px;
+        height: 290px;
     }
     
     .wine{
         width: 100%;
-        height: 390px;
+        height: 290px;
     }
 
     .purple_block{
-        height: 110px;
-        width: 28%;
+        height: 70px;
+        width: 30%;
     }
 
     .fourth_block{
-        height: 1455px;
+        height: 2555px;
+    }
+
+    .text_block{
+        flex-direction: column;
+    }
+
+    .text_block_1{
+        width: 100%;
+        height: 146px;
+    }
+
+    .text_block_2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 181px;
+        text-align: left;
     }
 
     .imgs_and_text_block{
-        height: 1100px;
+        display: grid;
+        grid-template-rows: repeat(5, 350px);
+        grid-template-columns: repeat(1, 100%);
+        width: 83%;
+        height: 2170px;
+    }
+
+    .grid_svg{
+        width: 200px;
     }
 
     .grid_text_block{
-        height: 350px;
+        width: 100%;
+        height: 230px;
     }
 
     .beatiful{
@@ -3118,6 +3355,7 @@ html, body, div, span, h1, h2, h3, p {
 
     .expect{
         font-size: 22px;
+        line-height: 32px;
     }
 
     .setting_up{
@@ -3132,19 +3370,19 @@ html, body, div, span, h1, h2, h3, p {
         font-size: 20px;
     }
 
-    .description_text{
-        font-size: 1px;
-        line-height: 20px;
-    }
-
     .fifth_block{
         width: 100%;
-        height: 922px;
-        background: rgba(248, 254, 145, 1);
+        height: 970px;
     }
 
     .goal_block{
-        height: 123px;
+        flex-direction: column;
+        height: 300px;
+    }
+
+    .goal_text_block{
+        width: 100%;
+        height: 193px;
     }
 
     .procedure{
@@ -3167,6 +3405,15 @@ html, body, div, span, h1, h2, h3, p {
         margin-bottom: 30px;
     }
 
+    .portfolio{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 100%;
+        height: 153px;
+    }
+
     .portfolio_text{
         font-size: 12px;
     }
@@ -3176,35 +3423,62 @@ html, body, div, span, h1, h2, h3, p {
     }
 
     .diff_text{
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .block_1{
-        margin-left: -450px;
+        width: 350px;
+        margin-left: -30px;
+    }
+
+    .block_2{
+        width: 220px;
+        margin-left: 150px;
+    }
+
+    .block_3{
+        width: 350px;
+        margin-left: 20px;
     }
 
     .block_4{
-        margin-left: 420px;
+        width: 200px;
+        margin-left: 150px;
+    }
+
+    .block_5{
+        width: 220px;
+        margin-left: 40px;
     }
 
     .block_6{
-        margin-left: -350px;
+        width: 350px;
+        margin-left: 0px;
     }
 
     .sixth_block{
-        height: 780px;
+        height: 1180px;
     }
 
     .double_container{
-        height: 600px;
+        flex-direction: column;
+        height: 1000px;
     }
     
     .creating_container{
-        height: 219px;
+        width: 90%;
+        height: 280px;
     }
 
     .photo_container{
+        width: 90%;
         height: 600px;
+        margin-left: 25px;
+    }
+
+    .about_medium{
+        width: 80%;
+        height: 24px;
     }
 
     .about_medium_text{
@@ -3217,34 +3491,40 @@ html, body, div, span, h1, h2, h3, p {
     
     .creating_text{
         line-height: 35px;
-        font-size: 23px;
+        font-size: 24px;
     }
     
     .when_building{
         font-family: 'Roboto';
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .allora_has_block{
         height: 155px;
-        width: 90%;
-        right: 55%;
+        width: 100%;
+        right: 15%;
+        top: 70%;
     }
     
     .allora_text{
         max-width: 700px;
-        font-size: 11px;
+        font-size: 13px;
         margin-left: 17px;
+    }
+
+    .name_text_block{
+        width: 54%;
+        height: 45px;
     }
     
     .name{
         max-width: 120px;
-        font-size: 7px;
+        font-size: 11px;
     }
     
     .prof{
         max-width: 520px;
-        font-size: 8px;
+        font-size: 11px;
     }
     
     .name_photo_container_1{
@@ -3256,18 +3536,21 @@ html, body, div, span, h1, h2, h3, p {
     }
     
     .allora_fits_block{
-        width: 90%;
+        width: 100%;
         height: 189px;
-        top: -12%;
-        left: 25%;
+        top: -30%;
+        left: 5%;
     }
 
     .seventh_block{
-        height: 863px;
+        height: 1050px;
     }
 
-    .annotation{
-        height: 300px;
+    .how_block{
+        width: 90%;
+        height: 153px;
+        margin-left: 20px;
+        margin-top: 90px;
     }
 
     .our_text_2{
@@ -3287,68 +3570,95 @@ html, body, div, span, h1, h2, h3, p {
         max-width: 480px;
     }
 
+    .annotation{
+        margin-left: 20px;
+        height: 300px;
+    }
+
+    .three_squares{
+        left: 10px;
+        top: 10px;
+        width: 50px;
+        height: 10px;
+    }
+    
+    .gray_square{
+        width: 8px;
+        height: 8px;
+    }
+
+    .annotation_text_block{
+        width: 100%;
+        height: 108px;
+        top: 1%;
+        left: 105%;
+    }
+
     .num_slash{
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .text_under{
         line-height: 20px;
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .see{
         font-size: 16px;
     }
 
-    .how_block{
-        width: 50%;
-        height: 153px;
-        margin-left: 80px;
-        margin-top: 90px;
-    }
-
-    .annotation_block1{
-        height: 398px;
-        bottom: 90%;
-    }
-
-    .annotation{
-        margin-left: 80px;
-    }
-
     .gray_border_square{
-        top: 72.5%;
+        top: 78%;
         left: 98%;
     }
 
     .annotation_block1{
-        height: 398px;
-        bottom: 80%;
-        left: -5%;
+        width: 40%;
+        height: 498px;
+        bottom: 150%;
+        left: -30%;
     }
     
     .annotation_block2{
-        height: 398px;
-        bottom: 240%;
-        left: 26%;
+        width: 40%;
+        height: 498px;
+        bottom: 270%;
+        left: -10%;
     }
     
     .annotation_block3{
-        height: 398px;
-        bottom: 360%;
-        left: 54%;
+        width: 50%;
+        height: 358px;
+        bottom: 380%;
+        left: 5%;
     }
 
     .eighth_block{
-        height: 964px;
+        height: 1850px;
+    }
+
+    .our_clients_block{
+        flex-direction: column;
+        width: 83%;
+        height: 153px;
+    }
+
+    .some_block{
+        width: 100%;
+        height: 146px;
+    }
+
+    .our_block_2{
+        width: 100%;
+        height: 153px;
     }
 
     .freq{
-        width: 100%;
+        width: 90%;
     }
 
     .frequently{
-        font-size: 14px;
+        font-size: 15px;
         margin-right: 20px;
     }
     
@@ -3361,27 +3671,40 @@ html, body, div, span, h1, h2, h3, p {
     }
 
     .every{
-        font-size: 11px;
+        font-size: 13px;
+    }
+
+    .questions_block{
+        width: 83%;
+        height: 1360px;
     }
 
     .sevices_text{
-        font-size: 12px;
+        font-size: 8px;
         padding-left: 5px;
     }
 
+    .question_blocks{
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(6, 200px);
+        grid-row-gap: 20px;
+        height: 1460px;
+    }
+
     .interest{
-        width: 48%;
+        width: 100%;
         height: 200px;
     }
 
     .question{
-        font-size: 2px;
+        font-size: 15px;
         max-width: 317px;
         font-size: 15px;
     }
     
     .under_question{
-        font-size: 10px;
+        font-size: 12px;
         max-width: 360px;
     }
 
@@ -3391,6 +3714,31 @@ html, body, div, span, h1, h2, h3, p {
         position: relative;
         left: 90%;
         bottom: 30%;
+    }
+
+    .ninth_block{
+        height: 1340px;
+    }
+
+    .double_container_2{
+        flex-direction: column;
+        height: 1300px;
+    }
+
+    .left_grid_block{
+        width: 100%;
+        height: 688.02px;
+    }
+
+    .right_photo{
+        width: 100%;
+        height: 600px;
+        margin-top: 10px;
+    }
+
+    .right_photo_container{
+        width: 100%;
+        height: 600px;
     }
 
     .clients_text{
@@ -3423,16 +3771,12 @@ html, body, div, span, h1, h2, h3, p {
     }
 
     .tenth_block{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: space-around;
-        width: 100%;
-        height: 1029px;
+        height: 1729px;
     }
 
     .contact_us_block{
-        height: 200px;
+        width: 80%;
+        margin-left: 50px;
     }
 
     .contact_us_text{
@@ -3444,11 +3788,9 @@ html, body, div, span, h1, h2, h3, p {
     }
 
     .dedicated{
-        font-family: 'Yeseva One';
         font-size: 32px;
         max-width: 452px;
         line-height: 46px;
-        color: rgba(55, 60, 66, 1);
     }
 
     .branding{
@@ -3456,19 +3798,36 @@ html, body, div, span, h1, h2, h3, p {
         max-width: 800px;
         line-height: 28px;
     }
+
+    .forms{ 
+        flex-direction: column;
+        height: 1379px;
+        margin-left: 50px;
+    }
+
+    .form_block_main{
+        width: 100%;
+        height: 679px;
+        background-color: rgba(145, 129, 255, 1);
+    }
     
     .collab{
-        margin-left: -120px;
+        margin-left: -175px;
     }
 
     .if{
-        font-size: 10px;
+        font-size: 14px;
         margin-left: 40px;
     }
     
     .hello{
         font-size: 15px;
-        margin-left: -105px;
+        margin-left: -155px;
+    }
+
+    .other_forms{
+        width: 100%;
+        height: 879px;
     }
 
     .looking{
@@ -3504,15 +3863,520 @@ html, body, div, span, h1, h2, h3, p {
         right: 90%;
     }
 
-    .our_link_2{
-        font-size: 18px;
+    .footer{
+        width: 100%;
+        height: 222px;
+    }
+
+    .footer_1{
+        height: 226px;
+    }
+
+    .usefull_links{
+        font-size: 13px;
+        line-height: 24px;
     }
 
     .link_block_2{
-        width: 80%;
+        width: 390px;
+        margin-left: 30px;
+    }
+
+    .link_2{
+        font-size: 9px;
+        line-height: 30px;
+        margin-right: 25px;
     }
 
     .information{
+        font-size: 10px;
+    }
+
+    .go_top{
+        width: 150px;
+        height: 40px;
+        left: 62%;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 375px) {
+    #but{
+        height: 19px;
+        width: 75px;
+    }
+
+    .allora_block{
+        width: 12%;
+        height: 16px;
+        right: 20%;
+    }
+
+    #menu_button{
+        margin-left: -8px;
+    }
+
+    #menu{
+        right: 150px;
+    }
+
+    .award_winning_up{
+        width: 80%;
+    }
+
+    .circles{
+        margin-bottom: 10px;
+    }
+    
+    .first_circle{
+        width: 15px;
+        height: 15px;
+    }
+    
+    .seckond_circle{
+        width: 15px;
+        height: 15px;
+    }
+
+    .award_winning_text{
+        font-size: 25px;
+    }
+
+    .design_imgs{
+        height: 350px;
+    }
+
+    .leaf_blocks{
+        width: 180px;
+    }
+    
+    .seck_blocks{
+        width: 130px;
+        left: 120px;
+    }
+    
+    .third_blocks{
+        width: 75px;
+        left: 236px;
+    }
+    
+    .white_arrow{
+        top: 75%;
+        margin-right: 6%;
+    }
+
+    .fourth_block{
+        height: 2655px;
+    }
+
+    .fifth_block{
+        width: 100%;
+        height: 970px;
+    }
+
+    .goal_block{
+        flex-direction: column;
+        height: 300px;
+    }
+
+    .goal_text_block{
+        width: 100%;
+        height: 193px;
+    }
+
+    .portfolio_text{
+        font-size: 13px;
+    }
+
+    .block_1{
+        width: 320px;
+    }
+
+    .block_6{
+        width: 320px;
+    }
+    
+    .creating_text{
+        font-size: 22px;
+    }
+
+    .seventh_block{
+        height: 1150px;
+    }
+
+    .our_block{
+        width: 70%;
+    }
+
+    .eighth_block{
+        height: 1950px;
+    }
+
+    .services_block1{
+        height: 49px;
+    }
+
+    .services_block2{
+        height: 49px;
+    }
+
+    .services_block3{
+        height: 49px;
+    }
+
+    .clients_text_block{
+        height: 280px;
+    }
+
+    .join{
+        font-size: 23px;
+        line-height: 30px;
+    }
+
+    .contact_us_block{
+        margin-left: 20px;
+        width: 90%;
+    }
+
+    .contact_us_text{
+        font-size: 15px;
+    }
+
+    .branding{
+        font-size: 13px;
+        margin-right: 20px;
+    }
+
+    .forms{ 
+        margin-left: 40px;
+    }
+
+    .if{
+        margin-right: 20px;
+    }
+    
+    .collab{
+        margin-left: -135px;
+    }
+    
+    .hello{
+        font-size: 15px;
+        margin-left: -115px;
+    }
+
+    .our_link_2{
+        font-size: 15px;
+    }
+
+    .footer{
+        width: 100%;
+        height: 222px;
+    }
+
+    .footer_1{
+        height: 250px;
+    }
+
+    .usefull_links{
+        font-size: 13px;
+        line-height: 24px;
+    }
+
+    .link_block_2{
+        display: flex;
+        flex-wrap: wrap;
+        width: 370px;
+        height: 67px;
+        margin-left: 0px;
+    }
+
+    .link_2{
+        font-size: 12px;
+        line-height: 30px;
+        margin-right: 25px;
+    }
+
+    .information{
+        font-size: 12px;
+    }
+
+    .go_top{
+        width: 130px;
+        height: 30px;
+        left: 62%;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header_up img{
+        left: 91%;
+    }
+
+    #but{
+        height: 19px;
+        width: 75px;
+        margin-left: -30px;
+    }
+
+    .allora_block{
+        width: 16%;
+        height: 16px;
+        right: 20%;
+    }
+
+    #menu_button{
+        margin-left: -35px;
+    }
+
+    #menu{
+        right: 170px;
+    }
+
+    .seckond_block{
+        height: 744px;
+    } 
+
+    .award_winning_up{
+        width: 93%;
+    }
+
+    .purple_line_1{
+        width: 60%;
+    }
+
+    .award_winning_text{
+        font-size: 23px;
+    }
+
+    .two_buttons{
+        width: 270px;
+    }
+
+    .design_imgs{
+        height: 290px;
+    }
+
+    .leaf_blocks{
+        width: 180px;
+        margin-left: -25px;
+    }
+    
+    .seck_blocks{
+        width: 120px;
+        left: 95px;
+    }
+    
+    .third_blocks{
+        width: 75px;
+        left: 201px;
+        top: -140px;
+    }
+    
+    .white_arrow{
+        top: 77%;
+        margin-right: 3%;
+    }
+
+    .fourth_block{
+        height: 2710px;
+    }
+
+    .beautiful_text{
+        font-size: 15px;
+    }
+
+    .fifth_block{
+        width: 100%;
+        height: 1100px;
+    }
+
+    .goal_text_block{
+        height: 123px;
+    }
+
+    .diff_text{
+        font-size: 15px;
+    }
+
+    .num{
+        font-size: 15px; 
+    }
+
+    .block_1{
+        width: 290px;
+        margin-left: 0px;
+    }
+
+    .block_2{
+        width: 180px;
+        margin-left: 130px;
+    }
+
+    .block_3{
+        width: 290px;
+        margin-left: 18px;
+    }
+
+    .block_4{
+        width: 180px;
+        margin-left: 120px;
+    }
+
+    .block_5{
+        width: 220px;
+        margin-left: 40px;
+    }
+
+    .block_6{
+        width: 230px;
+        margin-left: -40px;
+    }
+
+    .sixth_block{
+        height: 1080px;
+    }
+    
+    .creating_text{
+        font-size: 22px;
+    }
+
+    .photo_container{
+        width: 100%;
+        height: 550px;
+        margin-left: 0px;
+    }
+
+    .allora_has_block{
+        right: 7%;
+    }
+
+    .seventh_block{
+        height: 1150px;
+    }
+
+    .annotation_block1{
+        bottom: 160%;
+    }
+    
+    .annotation_block2{
+        bottom: 280%;
+    }
+    
+    .annotation_block3{
+        bottom: 390%;
+    }
+
+    .num_slash{
+        font-size: 15px;
+    }
+
+    .text_under{
         font-size: 11px;
+    }
+
+    .eighth_block{
+        height: 1950px;
+    }
+
+    .freq{
+        width: 98%;
+    }
+
+    .question{
+        position: absolute;
+        font-size: 14px;
+        max-width: 250px;
+        margin-left: -20px;
+    }
+
+    .under_question{
+        margin-left: 10px;
+    }
+
+    .arrow{
+        left: 88%;
+        bottom: -55%;
+    }
+
+    .tenth_block{
+        height: 2129px;
+    }
+
+    .contact_us{
+        width: 80%;
+    }
+
+    .dedicated{
+        font-size: 29px;
+    }
+
+    .contact_us_text{
+        font-size: 15px;
+    }
+
+    .forms{ 
+        margin-left: 30px;
+    }
+
+    .if{
+        margin-right: 20px;
+    }
+    
+    .collab{
+        margin-left: -90px;
+    }
+    
+    .hello{
+        font-size: 15px;
+        margin-left: -70px;
+    }
+
+    .call_us_block{
+        width: 70%;
+    }
+
+    .our_link_2{
+        font-size: 15px;
+    }
+
+    .footer{
+        width: 100%;
+        height: 222px;
+    }
+
+    .footer_1{
+        height: 250px;
+    }
+
+    .usefull_links{
+        font-size: 13px;
+        line-height: 24px;
+    }
+
+    .link_block_2{
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        width: 310px;
+        height: 67px;
+        margin-left: 5px;
+    }
+
+    .link_2{
+        font-size: 12px;
+        line-height: 30px;
+        margin-right: 25px;
+    }
+
+    .information{
+        font-size: 12px;
+    }
+
+    .go_top{
+        width: 130px;
+        height: 30px;
+        left: 57%;
+        font-size: 17px;
     }
 }
