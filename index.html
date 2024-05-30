@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/verst.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
     <header class="header_all">
@@ -13,8 +14,9 @@
             <img src="img/cross.png" alt="cross">
         </div>
         <div class="header_down">
+            <button id="but"><span>ligth</span></button>
             <div class="allora_block">
-                <img src="img/allora.png" alt="allora" class="allora">
+                <img src="img/allora.png" alt="allora">
             </div>
             <div class="link_block_1">
                 <a href="" class="link_1">Work</a>
@@ -24,12 +26,12 @@
                 <a href="" class="link_1">hello@medium.com</a>
                 <a href="" class="link_1">Let's talk</a>
                 <div class="purple_cube"></div>
-                <svg class="10%" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.05556 8.33906C9.15972 7.80469 9.73611 6.99609 9.73611 5.7375C9.73611 3.25547 7.90972 2.65078 5.80208 2.65078H0V15.1102H5.96528C8.20139 15.1102 10.3021 14.0238 10.3021 11.4926C10.3021 9.92813 9.56944 8.77149 8.05556 8.33906ZM2.70486 4.77773H5.24306C6.21875 4.77773 7.09722 5.05547 7.09722 6.20156C7.09722 7.25977 6.41319 7.68516 5.44792 7.68516H2.70486V4.77773ZM5.59722 12.9938H2.70486V9.5625H5.65278C6.84375 9.5625 7.59722 10.0652 7.59722 11.3414C7.59722 12.6 6.69792 12.9938 5.59722 12.9938ZM18.0451 4.53164H13.0556V3.30469H18.0451V4.53164ZM20 10.7297C20 8.06133 18.4583 5.83594 15.6632 5.83594C12.9479 5.83594 11.1042 7.90313 11.1042 10.6102C11.1042 13.4191 12.8507 15.3457 15.6632 15.3457C17.7917 15.3457 19.1701 14.3754 19.8333 12.3117H17.6736C17.441 13.0816 16.4826 13.4895 15.7396 13.4895C14.3056 13.4895 13.5521 12.6387 13.5521 11.1938H19.9792C19.9896 11.0461 20 10.8879 20 10.7297ZM13.5556 9.63281C13.6354 8.44805 14.4132 7.70625 15.5868 7.70625C16.816 7.70625 17.434 8.4375 17.5382 9.63281H13.5556Z" fill="#373C42"/>
+                <svg  class="be" width="20px" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.05556 8.33906C9.15972 7.80469 9.73611 6.99609 9.73611 5.7375C9.73611 3.25547 7.90972 2.65078 5.80208 2.65078H0V15.1102H5.96528C8.20139 15.1102 10.3021 14.0238 10.3021 11.4926C10.3021 9.92813 9.56944 8.77149 8.05556 8.33906ZM2.70486 4.77773H5.24306C6.21875 4.77773 7.09722 5.05547 7.09722 6.20156C7.09722 7.25977 6.41319 7.68516 5.44792 7.68516H2.70486V4.77773ZM5.59722 12.9938H2.70486V9.5625H5.65278C6.84375 9.5625 7.59722 10.0652 7.59722 11.3414C7.59722 12.6 6.69792 12.9938 5.59722 12.9938ZM18.0451 4.53164H13.0556V3.30469H18.0451V4.53164ZM20 10.7297C20 8.06133 18.4583 5.83594 15.6632 5.83594C12.9479 5.83594 11.1042 7.90313 11.1042 10.6102C11.1042 13.4191 12.8507 15.3457 15.6632 15.3457C17.7917 15.3457 19.1701 14.3754 19.8333 12.3117H17.6736C17.441 13.0816 16.4826 13.4895 15.7396 13.4895C14.3056 13.4895 13.5521 12.6387 13.5521 11.1938H19.9792C19.9896 11.0461 20 10.8879 20 10.7297ZM13.5556 9.63281C13.6354 8.44805 14.4132 7.70625 15.5868 7.70625C16.816 7.70625 17.434 8.4375 17.5382 9.63281H13.5556Z" fill="var(--color-text)"/>
                 </svg>
-                <svg width="10%" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="ball" width="18px" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1_33)">
-                    <path d="M10 0.3125C4.66016 0.3125 0.3125 4.66016 0.3125 10C0.3125 15.3398 4.66016 19.6875 10 19.6875C15.3398 19.6875 19.6875 15.3398 19.6875 10C19.6875 4.66016 15.3398 0.3125 10 0.3125ZM16.4062 4.78125C17.5586 6.1875 18.2578 7.98438 18.2734 9.9375C18 9.87891 15.2656 9.32422 12.5117 9.67188C12.2852 9.125 12.0742 8.64062 11.7852 8.04688C14.8438 6.79297 16.2305 5.01562 16.4062 4.78125ZM15.4844 3.82422C15.3359 4.03516 14.0898 5.71094 11.1484 6.8125C9.79297 4.32031 8.28906 2.27344 8.0625 1.96875C10.6836 1.33594 13.4492 2.01953 15.4844 3.82422ZM6.48047 2.52344C6.69922 2.82422 8.17578 4.87109 9.54688 7.30859C5.67578 8.33594 2.26562 8.32031 1.89844 8.31641C2.4375 5.75 4.16797 3.61719 6.48047 2.52344ZM1.72656 10.0117C1.72656 9.92578 1.72656 9.84375 1.73047 9.75781C2.09375 9.76562 6.10156 9.81641 10.2344 8.58203C10.4727 9.04688 10.6992 9.51562 10.9062 9.98438C7.91406 10.8281 5.19531 13.25 3.85156 15.5469C2.53125 14.0781 1.72656 12.1367 1.72656 10.0117ZM4.92188 16.5391C5.78516 14.7734 8.13281 12.4922 11.4688 11.3516C12.6289 14.3711 13.1094 16.9023 13.2344 17.625C10.5703 18.7617 7.37109 18.4531 4.92188 16.5391ZM14.625 16.8711C14.5391 16.3672 14.1016 13.9453 13.0156 10.9727C15.6094 10.5586 17.8867 11.2383 18.168 11.3281C17.8008 13.6289 16.4805 15.6172 14.625 16.8711Z" fill="#373C42"/>
+                    <path d="M10 0.3125C4.66016 0.3125 0.3125 4.66016 0.3125 10C0.3125 15.3398 4.66016 19.6875 10 19.6875C15.3398 19.6875 19.6875 15.3398 19.6875 10C19.6875 4.66016 15.3398 0.3125 10 0.3125ZM16.4062 4.78125C17.5586 6.1875 18.2578 7.98438 18.2734 9.9375C18 9.87891 15.2656 9.32422 12.5117 9.67188C12.2852 9.125 12.0742 8.64062 11.7852 8.04688C14.8438 6.79297 16.2305 5.01562 16.4062 4.78125ZM15.4844 3.82422C15.3359 4.03516 14.0898 5.71094 11.1484 6.8125C9.79297 4.32031 8.28906 2.27344 8.0625 1.96875C10.6836 1.33594 13.4492 2.01953 15.4844 3.82422ZM6.48047 2.52344C6.69922 2.82422 8.17578 4.87109 9.54688 7.30859C5.67578 8.33594 2.26562 8.32031 1.89844 8.31641C2.4375 5.75 4.16797 3.61719 6.48047 2.52344ZM1.72656 10.0117C1.72656 9.92578 1.72656 9.84375 1.73047 9.75781C2.09375 9.76562 6.10156 9.81641 10.2344 8.58203C10.4727 9.04688 10.6992 9.51562 10.9062 9.98438C7.91406 10.8281 5.19531 13.25 3.85156 15.5469C2.53125 14.0781 1.72656 12.1367 1.72656 10.0117ZM4.92188 16.5391C5.78516 14.7734 8.13281 12.4922 11.4688 11.3516C12.6289 14.3711 13.1094 16.9023 13.2344 17.625C10.5703 18.7617 7.37109 18.4531 4.92188 16.5391ZM14.625 16.8711C14.5391 16.3672 14.1016 13.9453 13.0156 10.9727C15.6094 10.5586 17.8867 11.2383 18.168 11.3281C17.8008 13.6289 16.4805 15.6172 14.625 16.8711Z" fill="var(--color-text)"/>
                     </g>
                     <defs>
                     <clipPath id="clip0_1_33">
@@ -38,10 +40,38 @@
                     </defs>
                 </svg>  
             </div>
+            <div class="menu_container">
+                <button id="menu_button">
+                    <img src="img/menu.png" alt="">
+                </button>
+                <div id="menu" class="menu-slide disp">
+                    <div class="svgs">
+                        <svg style="margin-right: 20px;"  width="20%" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.05556 8.33906C9.15972 7.80469 9.73611 6.99609 9.73611 5.7375C9.73611 3.25547 7.90972 2.65078 5.80208 2.65078H0V15.1102H5.96528C8.20139 15.1102 10.3021 14.0238 10.3021 11.4926C10.3021 9.92813 9.56944 8.77149 8.05556 8.33906ZM2.70486 4.77773H5.24306C6.21875 4.77773 7.09722 5.05547 7.09722 6.20156C7.09722 7.25977 6.41319 7.68516 5.44792 7.68516H2.70486V4.77773ZM5.59722 12.9938H2.70486V9.5625H5.65278C6.84375 9.5625 7.59722 10.0652 7.59722 11.3414C7.59722 12.6 6.69792 12.9938 5.59722 12.9938ZM18.0451 4.53164H13.0556V3.30469H18.0451V4.53164ZM20 10.7297C20 8.06133 18.4583 5.83594 15.6632 5.83594C12.9479 5.83594 11.1042 7.90313 11.1042 10.6102C11.1042 13.4191 12.8507 15.3457 15.6632 15.3457C17.7917 15.3457 19.1701 14.3754 19.8333 12.3117H17.6736C17.441 13.0816 16.4826 13.4895 15.7396 13.4895C14.3056 13.4895 13.5521 12.6387 13.5521 11.1938H19.9792C19.9896 11.0461 20 10.8879 20 10.7297ZM13.5556 9.63281C13.6354 8.44805 14.4132 7.70625 15.5868 7.70625C16.816 7.70625 17.434 8.4375 17.5382 9.63281H13.5556Z" fill="var(--color-text)"/>
+                        </svg>
+                        <svg width="15%" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_33)">
+                            <path d="M10 0.3125C4.66016 0.3125 0.3125 4.66016 0.3125 10C0.3125 15.3398 4.66016 19.6875 10 19.6875C15.3398 19.6875 19.6875 15.3398 19.6875 10C19.6875 4.66016 15.3398 0.3125 10 0.3125ZM16.4062 4.78125C17.5586 6.1875 18.2578 7.98438 18.2734 9.9375C18 9.87891 15.2656 9.32422 12.5117 9.67188C12.2852 9.125 12.0742 8.64062 11.7852 8.04688C14.8438 6.79297 16.2305 5.01562 16.4062 4.78125ZM15.4844 3.82422C15.3359 4.03516 14.0898 5.71094 11.1484 6.8125C9.79297 4.32031 8.28906 2.27344 8.0625 1.96875C10.6836 1.33594 13.4492 2.01953 15.4844 3.82422ZM6.48047 2.52344C6.69922 2.82422 8.17578 4.87109 9.54688 7.30859C5.67578 8.33594 2.26562 8.32031 1.89844 8.31641C2.4375 5.75 4.16797 3.61719 6.48047 2.52344ZM1.72656 10.0117C1.72656 9.92578 1.72656 9.84375 1.73047 9.75781C2.09375 9.76562 6.10156 9.81641 10.2344 8.58203C10.4727 9.04688 10.6992 9.51562 10.9062 9.98438C7.91406 10.8281 5.19531 13.25 3.85156 15.5469C2.53125 14.0781 1.72656 12.1367 1.72656 10.0117ZM4.92188 16.5391C5.78516 14.7734 8.13281 12.4922 11.4688 11.3516C12.6289 14.3711 13.1094 16.9023 13.2344 17.625C10.5703 18.7617 7.37109 18.4531 4.92188 16.5391ZM14.625 16.8711C14.5391 16.3672 14.1016 13.9453 13.0156 10.9727C15.6094 10.5586 17.8867 11.2383 18.168 11.3281C17.8008 13.6289 16.4805 15.6172 14.625 16.8711Z" fill="var(--color-text)"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_1_33">
+                            <rect width="20" height="20" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg> 
+                    </div>
+                    <a href="" class="link_1">Work</a>
+                    <a href="" class="link_1">Services</a>
+                    <a href="" class="link_1">+1123 456 7890</a>
+                    <a href="" class="link_1">hello@medium.com</a>
+                    <a href="" class="link_1">Let's talk</a>
+                </div>
+            </div>
         </div>
     </header>
+    <br><br><br><br><br><br><br><br>
     <div class="seckond_block">
-        <div class="award_winning">
+        <div class="anim award_winning">
             <div class="award_winning_up">
                 <p class="date">2016-22</p>
                 <div class="circles">
@@ -238,7 +268,7 @@
     <div class="third_block">
         <div class="photo_blocks">
             <div class="photo_block_1">
-                <div class="phone">
+                <div class="anim phone">
                     <div class="purple_block">
                         <div class="plus">
                             <div class="vertical_line"></div>
@@ -246,7 +276,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="pumpbottle">
+                <div class="anim pumpbottle">
                     <div class="purple_block">
                         <div class="plus">
                             <div class="vertical_line"></div>
@@ -254,7 +284,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="packet">
+                <div class="anim packet">
                     <div class="purple_block">
                         <div class="plus">
                             <div class="vertical_line"></div>
@@ -264,7 +294,7 @@
                 </div>
             </div>
             <div class="photo_block_2">
-                <div class="laptop">
+                <div class="anim laptop">
                     <div class="purple_block">
                         <div class="plus">
                             <div class="vertical_line"></div>
@@ -272,7 +302,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tag">
+                <div class="anim tag">
                     <div class="purple_block">
                         <div class="plus">
                             <div class="vertical_line"></div>
@@ -280,7 +310,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="wine">
+                <div class="anim wine">
                     <div class="purple_block">
                         <div class="plus">
                             <div class="vertical_line"></div>
@@ -292,22 +322,22 @@
         </div>
     </div>
     <div class="fourth_block">
-        <div class="text_block">
-            <div class="text_block_1">
+        <div class="anim text_block">
+            <div class="anim text_block_1">
                 <div class="beatiful">
                     <p class="beautiful_text">BEUTIFUL CREATIVE SOLUTIONS</p>
                     <div class="purple_line_2"></div>
                 </div>
                 <p class="expect">Expect nothing less than perfect</p>
             </div>
-            <div class="text_block_2">
+            <div class="anim text_block_2">
                 <p class="setting_up">Setting up your own portfolio site is an awesome method for communicating who you are as an inventive, and to impart your abilities to the world. How about we investigate how to make a free portfolio and all that you ought to remember for it.</p>
                 <a href="" class="how_work">How we work</a>
             </div>
         </div>
         <div class="imgs_and_text_block">
-            <div class="grid">
-                <svg width="81%" height="265" viewBox="0 0 300 265" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="anim grid">
+                <svg class="grid_svg" width="71%" height="265" viewBox="0 0 300 265" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M295.063 91.5434H2.36687V77.6563C2.36687 76.0231 3.69172 74.6987 5.32545 74.6987H292.105C293.738 74.6987 295.063 76.0231 295.063 77.6563V91.5434Z" fill="#E1E7F3"/>
                     <path d="M21.5213 85.4234C22.7935 85.4234 23.8249 84.3924 23.8249 83.1207C23.8249 81.8489 22.7935 80.8179 21.5213 80.8179C20.2491 80.8179 19.2178 81.8489 19.2178 83.1207C19.2178 84.3924 20.2491 85.4234 21.5213 85.4234Z" fill="white"/>
                     <path d="M30.2657 85.4234C31.5379 85.4234 32.5692 84.3924 32.5692 83.1207C32.5692 81.8489 31.5379 80.8179 30.2657 80.8179C28.9935 80.8179 27.9621 81.8489 27.9621 83.1207C27.9621 84.3924 28.9935 85.4234 30.2657 85.4234Z" fill="white"/>
@@ -341,12 +371,12 @@
                         <p class="num_text">01</p>
                         <div class="purple_line_3"></div>
                     </div>
-                    <p class="heading">Web Design</p>
+                    <h1 class="heading">Web Design</h1>
                     <p class="description">Why investment portfolio is important to your career Allora can help you get your work noticed whether you are a graphic designer, product designer, web developer, writer, illustrator.</p>
                 </div>
             </div>
-            <div class="grid">
-                <svg width="81%" height="267" viewBox="0 0 300 267" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <div class="anim grid">
+                <svg class="grid_svg" width="71%" height="267" viewBox="0 0 300 267" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <path d="M0 0H300V267H0V0Z" fill="url(#pattern0_1_357)"/>
                     <defs>
                     <pattern id="pattern0_1_357" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -364,8 +394,8 @@
                     <p class="description">The portfolio website provides visibility for your work showing it to the people you want to see unlike the static black and white of traditional resumes online portfolios bring your work to life.</p>
                 </div>
             </div>
-            <div class="grid">
-                <svg width="81%" height="267" viewBox="0 0 300 267" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <div class="anim grid">
+                <svg class="grid_svg" width="71%" height="267" viewBox="0 0 300 267" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <path d="M0 0H300V267H0V0Z" fill="url(#pattern0_1_359)"/>
                     <defs>
                     <pattern id="pattern0_1_359" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -383,8 +413,8 @@
                     <p class="description">In full color it makes your participation in creative output a positive and direct experience. Potential clients and employers can immediately see your achievements and your uniqueness.</p>
                 </div>
             </div>
-            <div class="grid">
-                <svg width="81%" height="267" viewBox="0 0 300 267" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <div class="anim grid">
+                <svg style="margin-left: -25px;" width="71%" height="267" viewBox="0 0 300 267" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <path d="M0 0H300V267H0V0Z" fill="url(#pattern0_1_374)"/>
                     <defs>
                     <pattern id="pattern0_1_374" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -402,8 +432,8 @@
                     <p class="description">The personal portfolio shows them your identity as a creative professional, the ideas behind your work and whether you are suitable for a particular job or project, put your work out in the world!</p>
                 </div>
             </div>
-            <div class="grid">
-                <svg width="81%" height="267" viewBox="0 0 300 267" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <div class="anim grid">
+                <svg class="grid_svg" width="71%" height="267" viewBox="0 0 300 267" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <path d="M0 0H300V267H0V0Z" fill="url(#pattern0_1_382)"/>
                     <defs>
                     <pattern id="pattern0_1_382" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -424,7 +454,7 @@
         </div>
     </div>
     <div class="fifth_block">
-        <div class="goal_block">
+        <div class="anim goal_block">
             <div class="goal_text_block">
                 <div class="procedure">
                     <p class="proc_text">PROCEDURE</p>
@@ -439,32 +469,32 @@
         </div>
         <div class="list_of_nums">
             <div class="black_line"></div>
-            <div class="block_1">
+            <div class="anim block_1">
                 <p class="num">01</p>
                 <p class="diff_text">Goal Identification</p>
             </div>
             <div class="black_line"></div>
-            <div class="block_2">
+            <div class="anim block_2">
                 <p class="num">02</p>
                 <p class="diff_text">Scope Definition</p>
             </div>
             <div class="black_line"></div>
-            <div class="block_3">
+            <div class="anim block_3">
                 <p class="num">03</p>
                 <p class="diff_text">Sitemap and Wireframe Creation</p>
             </div>
             <div class="black_line"></div>
-            <div class="block_4">
+            <div class="anim block_4">
                 <p class="num">04</p>
                 <p class="diff_text">Content Creation</p>
             </div>
             <div class="black_line"></div>
-            <div class="block_5">
+            <div class="anim block_5">
                 <p class="num">05</p>
                 <p class="diff_text">Visual Elements</p>
             </div>
             <div class="black_line"></div>
-            <div class="block_6">
+            <div class="anim block_6">
                 <p class="num">06</p>
                 <p class="diff_text">Testing & Launch</p>
             </div>
@@ -476,7 +506,7 @@
         <div class="white_lines"></div>
         <div class="white_lines"></div>
         <div class="double_container">
-            <div class="creating_container">
+            <div class="anim creating_container">
                 <div class="about_medium">
                     <p class="about_medium_text">ABOUT MEDIUM</p>
                     <div class="white_line1"></div>
@@ -486,7 +516,7 @@
                 <a href="" class="our_text">Our core values</a>
             </div>
             <div class="photo_container">
-                <div class="allora_has_block">
+                <div class="anim allora_has_block">
                     <p class="allora_text">"Allora has completely surpassed our expectations not able to tell you how happy I am with your awesome work guys."</p>
                     <div class="name_block">
                         <div class="name_photo_container_1"></div>
@@ -496,7 +526,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="allora_fits_block">
+                <div class="anim allora_fits_block">
                     <p class="allora_text">"Allora fits our needs perfectly is the most valuable business resource we have ever purchased we are so happy!"</p>
                     <div class="name_block">
                         <div class="name_photo_container_2"></div>
@@ -511,7 +541,7 @@
     </div>
     </div>
     <div class="seventh_block">
-        <div class="how_block">
+        <div class="anim how_block">
             <div class="our_block">
                 <p class="our_text_2">OUR CORE VALUES</p>
                 <div class="purple_line_5"></div>
@@ -526,34 +556,34 @@
                 <div class="gray_square"></div>
                 <div class="gray_square"></div>
             </div>
-            <div class="annotation_block1">
+            <div class="anim annotation_block1">
                 <div class="annotation_text_block">
                     <p class="num_slash">01 / Data driven</p>
                     <p class="text_under">Identify the types of customers you want to reach and create a plan accordingly.</p>
                 </div>
                 <div class="gray_border_square"></div>
             </div>
-            <div class="annotation_block2">
+            <div class="anim annotation_block2">
                 <div class="annotation_text_block">
                     <p class="num_slash">02 / Result oriented</p>
                     <p class="text_under">Show your personal style and aesthetics. Assemble an online portfolio to capture the essence of your identity.</p>
                 </div>
                 <div class="gray_border_square"></div>
             </div>
-            <div class="annotation_block3">
+            <div class="anim annotation_block3">
                 <div class="annotation_text_block">
-                    <p class="num_slash">03 / Forward thinking</p>
-                    <p class="text_under">Think of your homepage as a cohesive work body. Each project image, text block etc needs to be harmoniously combined.</p>
+                    <p class="num_slash" style="font-size: 15px;">03 / Forward thinking</p>
+                    <p class="text_under" style="font-size: 11px;">Think of your homepage as a cohesive work body. Each project image, text block etc needs to be harmoniously combined.</p>
                 </div>
-                <div class="gray_border_square"></div>
+                <div class="gray_border_square" style="top: 78%;"></div>
             </div>
         </div>
     </div>
     <div class="eighth_block">
-        <div class="our_clients_block">
+        <div class="anim our_clients_block">
             <div class="some_block">
                 <div class="freq">
-                    <p class="frequently">Frequently Asked questions</p>
+                    <p class="frequently">FREQUENTLY ASKED QUESTIONS</p>
                     <div class="purple_line_6"></div>
                 </div>
                 <p class="some">Some questions you might have</p>
@@ -564,18 +594,18 @@
             </div>
         </div>
         <div class="questions_block">
-            <div class="services_blocks">
+            <div class="anim services_blocks">
                 <div class="services_block1">
                     <p class="sevices_text">GENERAL INQUIRIES</p>
                 </div>
-                <div class="services_block2">
+                <div class="anim services_block2">
                     <p class="sevices_text">SERVICES</p>
                 </div>
-                <div class="services_block3">
+                <div class="anim services_block3">
                     <p class="sevices_text">BILLING & SUPPORT</p>
                 </div>
             </div>
-            <div class="question_blocks">
+            <div class="anim question_blocks">
                 <div class="interest">
                     <div class="quest_arrow">
                         <p class="question">Can you design my Website?</p>
@@ -626,7 +656,7 @@
         <div class="white_lines"></div>
         <div class="white_lines"></div>
         <div class="double_container_2">
-            <div class="left_grid_block">
+            <div class="anim left_grid_block">
                 <div class="clients_text_block">
                     <div class="clients_block">
                         <p class="clients_text">OUR CLIENTS</p>
@@ -767,7 +797,7 @@
                 </div>
                 <p class="by">By telling these stories, they get a glimpse into your creative process and know what to expect if they hire you.</p>
             </div>
-            <div class="right_photo">
+            <div class="anim right_photo">
                 <div class="right_photo_container">
                     <img src="img/ofice.jpg" alt="office">
                 </div>
@@ -775,7 +805,7 @@
         </div>
     </div>
     <div class="tenth_block">
-        <div class="contact_us_block">
+        <div class="anim contact_us_block">
             <div class="contact_us">
                 <p class="contact_us_text">CONTACT US</p>
                 <div class="purple_line_7"></div>
@@ -784,7 +814,7 @@
             <p class="branding">Branding isn’t only for big companies. Whether you’re a retail giant or a freelancer, branding shows your value and how you’re different from the competition.</p>
         </div>
         <div class="forms">
-            <div class="form_block_main">
+            <div class="anim form_block_main">
                 <p class="collab">COLLABORATE</p>
                 <p class="if">If you're ready to start a project, fill up the form below and our team will be in touch to find out more.</p>
                 <a href="" class="hello">hello@allora.com</a>
@@ -798,7 +828,7 @@
                     <p class="pink_num">01</p>
                 </div>
             </div>
-            <div class="other_forms">
+            <div class="anim other_forms">
                 <div class="form1">
                     <p class="join_our">JOIN OUR TEAM</p>
                     <p class="looking">We're always looking for talented new members that push us to be bolder, dream bigger, and perform better.</p>
@@ -828,8 +858,8 @@
     </div>
     <footer class="footer">
         <div class="footer_1">
-            <p class="usefull_links">USEFULL LINKS</p>
-            <div class="link_block_2">
+            <p class="anim usefull_links">USEFULL LINKS</p>
+            <div class="anim link_block_2">
                 <a href="" class="link_2">Work</a>
                 <div class="gray_cube"></div>
                 <a href="" class="link_2">Services</a>
@@ -838,7 +868,7 @@
                 <div class="gray_cube"></div>
                 <a href="" class="link_2">Send us a message</a>
             </div>
-            <div class="link_block_2">
+            <div class="anim link_block_2">
                 <a href="" class="link_2">+1123 456 7890</a>
                 <div class="gray_cube"></div>
                 <a href="" class="link_2">hello@allora.com</a>
@@ -847,14 +877,13 @@
         <div class="footer_2">
             <p class="copyright">Copyright ©2022 Made with by <span>Portentus</span></p>
             <div class="information_block">
-                <p class="information">Buy Template!|</p>
-                <p class="information">Version 1.0| Image</p>
-                <p class="information">Licenses |</p>
-                <p class="information">Instructions| Made By Pablo Ramos| Visit</p>
-                <p class="information">My Templates | Powered By</p>
-                <p class="information">Webflow</p>
+                <p class="information">
+                    Buy Template!|  Version 1.0| Image  Licenses |  Instructions| Made By Pablo Ramos| Visit My Templates | Powered By  Webflow
+                </p>
             </div>
         </div>
     </footer>
+    <button class="go_top">↑ go to top</button>
+    <script src="darck.js"></script>
 </body>
 </html> 
